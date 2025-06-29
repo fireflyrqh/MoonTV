@@ -29,8 +29,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='zh-CN' suppressHydrationWarning>
+      {/* 
+        修改 1: 在 body 上添加 flex 和 flex-col，使其成为一个纵向的flex容器。
+        这对于将页脚推到底部至关重要。
+      */}
       <body
-        className={`${inter.className} min-h-screen bg-white text-gray-900 dark:bg-black dark:text-gray-200`}
+        className={`${inter.className} flex min-h-screen flex-col bg-white text-gray-900 dark:bg-black dark:text-gray-200`}
       >
         <ThemeProvider
           attribute='class'
@@ -38,7 +42,22 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AuthProvider>{children}</AuthProvider>
+          {/*
+            修改 2: 用一个 <main> 标签包裹主要内容，并让它 flex-grow。
+            这会让主内容区域自动伸展，占据所有可用空间，从而将页脚推到底部。
+          */}
+          <main className='flex-grow'>
+            <AuthProvider>{children}</AuthProvider>
+          </main>
+
+          {/*
+            修改 3: 在主内容之后，添加 footer 元素。
+            这里使用了 Tailwind CSS 进行样式设置。
+          */}
+          <footer className='py-4 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800'>
+            © {new Date().getFullYear()} 云上月枫下叶 版权所有.
+            邮箱：yf@linux.do
+          </footer>
         </ThemeProvider>
       </body>
     </html>
