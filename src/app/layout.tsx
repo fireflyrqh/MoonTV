@@ -35,7 +35,7 @@ export default function RootLayout({
         这对于将页脚推到底部至关重要。
       */}
       <body
-        className={`${inter.className} flex min-h-dvh flex-col bg-white text-gray-900 dark:bg-black dark:text-gray-200`}
+        className={`${inter.className} flex min-h-dvh flex-col bg-white text-gray-900 dark:bg-black dark:text-gray-200 pb-16`}
       >
         <ThemeProvider
           attribute='class'
@@ -55,7 +55,7 @@ export default function RootLayout({
             修改 3: 在主内容之后，添加 footer 元素。
             这里使用了 Tailwind CSS 进行样式设置。
           */}
-          <footer className='py-6 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800'>
+          <footer className='py-6 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 bg-inherit'>
             {/* 版权信息 */}
             <p className='px-4'>
               Copyright © 2024–{new Date().getFullYear()} EhhxTV. All Rights Reserved.
