@@ -5,11 +5,12 @@ import './globals.css';
 
 import AuthProvider from '../components/AuthProvider';
 import { ThemeProvider } from '../components/ThemeProvider';
+import ObfuscatedEmail from '../components/ObfuscatedEmail'; 
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'MoonTV',
+  title: 'EhhxTV',
   description: '影视聚合',
   manifest: '/manifest.json',
 };
@@ -54,9 +55,17 @@ export default function RootLayout({
             修改 3: 在主内容之后，添加 footer 元素。
             这里使用了 Tailwind CSS 进行样式设置。
           */}
-          <footer className='py-4 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800'>
-            © {new Date().getFullYear()} 云上月枫下叶 版权所有.
-            基于moonTV构建,邮箱：yf@linux.do
+          <footer className='py-6 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800'>
+            {/* 版权信息 */}
+            <p>
+              Copyright © 2024–{new Date().getFullYear()} EhhxTV. All Rights Reserved.
+            </p>
+            {/* 作者和联系方式 */}
+            <div className='mt-2 flex items-center justify-center gap-x-2'>
+              <span>基于MoonTV构建</span>
+              <span>|</span>
+              <ObfuscatedEmail />
+            </div>
           </footer>
         </ThemeProvider>
       </body>
