@@ -57,11 +57,11 @@ export default function RootLayout({
           */}
           <footer className='py-6 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800'>
             {/* 版权信息 */}
-            <p>
+            <p className='px-4'>
               Copyright © 2024–{new Date().getFullYear()} EhhxTV. All Rights Reserved.
             </p>
             {/* 作者和联系方式 */}
-            <div className='mt-2 flex items-center justify-center gap-x-2'>
+            <div className='mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1'>
               <span>基于MoonTV构建</span>
               <span>|</span>
               <ObfuscatedEmail />
