@@ -56,7 +56,7 @@ export default function RootLayout({
           */}
           <footer className='py-4 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800'>
             © {new Date().getFullYear()} 云上月枫下叶 版权所有.
-            邮箱：yf@linux.do
+            基于moonTV构建,邮箱：yf@linux.do
           </footer>
         </ThemeProvider>
       </body>
