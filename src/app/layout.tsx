@@ -35,7 +35,7 @@ export default function RootLayout({
         这对于将页脚推到底部至关重要。
       */}
       <body
-        className={`${inter.className} flex min-h-dvh flex-col bg-white text-gray-900 dark:bg-black dark:text-gray-200 pb-16`}
+        className={`${inter.className} flex min-h-dvh flex-col bg-white text-gray-900 dark:bg-black dark:text-gray-200 pb-14`}
       >
         <ThemeProvider
           attribute='class'
